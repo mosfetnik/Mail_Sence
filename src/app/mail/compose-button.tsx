@@ -2,6 +2,8 @@
 import { Pencil } from "lucide-react";
 import React from "react";
 import { Button } from "~/components/ui/button";
+import { toast } from "sonner";
+
 import {
   Drawer,
   DrawerClose,
@@ -13,6 +15,8 @@ import {
   DrawerTrigger,
 } from "~/components/ui/drawer";
 import EmailEditor from "./email-editor";
+import { api } from "~/trpc/react";
+import useThreads from "~/hooks/use-thread";
 
 const ComposeButton = () => {
   const [toValues, setToValues] = React.useState<
@@ -24,8 +28,40 @@ const ComposeButton = () => {
 
   const [subject, setSubject] = React.useState<string>("");
 
+  const sendEmail = api.account.sendEmail.useMutation();
+  const { account } = useThreads();
+
   const handleSend = async (value: string) => {
-    console.log("value", value);
+    if (!account) return;
+
+    sendEmail.mutate(
+      {
+        accountId: account.id,
+        threadId: undefined,
+        body: value,
+        subject,
+        from: {
+          name: account?.name ?? "Me",
+          address: account?.emailAddress ?? "me@example.com",
+        },
+        to: toValues.map((to) => ({ name: to.value, address: to.value })),
+        cc: ccValues.map((cc) => ({ name: cc.value, address: cc.value })),
+        replyTo: {
+          name: account?.name ?? "Me",
+          address: account?.emailAddress ?? "me@example.com",
+        },
+        inReplyTo: undefined,
+      },
+      {
+        onSuccess: () => {
+          toast.success("Email sent");
+        },
+        onError: (error) => {
+          console.log(error);
+          toast.error(error.message);
+        },
+      },
+    );
   };
 
   return (
@@ -49,7 +85,7 @@ const ComposeButton = () => {
           handleSend={handleSend}
           to={toValues.map((to) => to.value)}
           defaultToolBarExpanded={true}
-          isSending={false}
+          isSending={sendEmail.isPending}
         />
       </DrawerContent>
     </Drawer>

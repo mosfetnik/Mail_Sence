@@ -121,13 +121,13 @@ const EmailEditor = ({
 
       <Separator />
       <div className="items flex justify-between px-4 py-3">
-        <span className="text-sm">
+        {/* <span className="text-sm">
           Tip : Press{" "}
           <kbd className="rounded-sm border border-gray-200 bg-gray-100 px-2 py-1.5 text-xs font-semibold text-gray-800">
            Ctrl + Q
           </kbd>{" "}
           for AI autocomplete
-        </span>
+        </span> */}
         <Button
           onClick={async () => {
             editor?.commands?.clearContent();

@@ -3,7 +3,7 @@ import React from "react";
 import EmailEditor from "./email-editor";
 import { api, RouterOutputs } from "~/trpc/react";
 import useThreads from "~/hooks/use-thread";
-import {  toast } from 'sonner'
+import { toast } from "sonner";
 
 const ReplyBox = () => {
   const { threadId, accountId } = useThreads();

@@ -71,7 +71,7 @@ const Mail = ({
             </div>
             <Separator />
             <Sidebar isCollapsed={isCollapsed} />
-            <div className="flex h-full flex-1 flex-col">AI</div>
+          
           </div>
         </ResizablePanel>
         <ResizableHandle withHandle />
@@ -97,7 +97,7 @@ const Mail = ({
               </TabsList> */}
             </div>
             <Separator />
-            Search Bar
+          
             <TabsContent value="inbox"><ThreadList /></TabsContent>
             <TabsContent value="done"><ThreadList /></TabsContent>
           </Tabs>
