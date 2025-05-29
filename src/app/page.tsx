@@ -4,7 +4,7 @@ import LinkAccountButton from "./_components/link-account-button";
 export default async function Home() {
   return (
     <div
-      className="flex min-h-screen flex-col justify-between bg-gray-50 text-center"
+      className="flex min-h-screen  flex-col justify-between bg-gray-50 text-center"
       style={{
         backgroundImage: "url('34.svg')",
         backgroundSize: "cover",
@@ -13,16 +13,16 @@ export default async function Home() {
       }}
     >
       {/* Top Section */}
-      <div className="flex flex-col items-center bg-gradient-to-r from-blue-500 via-purple-600 to-indigo-700 bg-clip-text pt-20 text-transparent dark:text-white">
+      <div className="flex flex-col mt-4 items-center bg-gradient-to-r from-blue-500 via-purple-600 to-indigo-700 bg-clip-text pt-20 text-transparent dark:text-white">
         <h1 className="max-w-4xl text-2xl font-extrabold sm:text-5xl lg:text-6xl">
           Emails so smart, they might reply before you do!
         </h1>
 
         {/* Funny Paragraph */}
         <p className="mt-6 max-w-2xl text-lg font-medium text-gray-100 dark:text-gray-300 sm:text-xl lg:text-2xl">
-          Say goodbye to inbox overwhelm! Mailsese uses AI magic to sort,
-          reply, and organize your emails — so you can kick back and let the
-          bots do the heavy lifting.
+          Say goodbye to inbox overwhelm! Mailsese uses AI magic to sort, reply,
+          and organize your emails — so you can kick back and let the bots do
+          the heavy lifting.
         </p>
 
         {/* Welcome Heading */}
