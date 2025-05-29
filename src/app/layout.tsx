@@ -9,7 +9,7 @@ import { ThemeProvider } from "~/components/ui/theme-provider";
 import { Toaster, toast } from 'sonner'
 
 export const metadata: Metadata = {
-  title: "MailSence",
+  title: "MailSense",
   description: "Your Ai power mail ",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };

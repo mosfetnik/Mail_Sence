@@ -20,14 +20,14 @@ export default async function Home() {
 
         {/* Funny Paragraph */}
         <p className="mt-6 max-w-2xl text-lg font-medium text-gray-100 dark:text-gray-300 sm:text-xl lg:text-2xl">
-          Say goodbye to inbox overwhelm! Mailsence uses AI magic to sort,
+          Say goodbye to inbox overwhelm! Mailsese uses AI magic to sort,
           reply, and organize your emails — so you can kick back and let the
           bots do the heavy lifting.
         </p>
 
         {/* Welcome Heading */}
         <h2 className="mt-4 text-3xl font-extrabold text-blue-600 dark:text-blue-400 sm:text-4xl lg:text-5xl">
-          Try the MailSence
+          Try the MailSense
         </h2>
 
         <div className="mt-6">
