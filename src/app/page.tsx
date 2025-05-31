@@ -20,7 +20,7 @@ export default async function Home() {
 
         {/* Funny Paragraph */}
         <p className="mt-6 max-w-2xl text-lg font-medium text-gray-100 dark:text-gray-300 sm:text-xl lg:text-2xl">
-          Say goodbye to inbox overwhelm! Mailsese uses AI magic to sort, reply,
+          Say goodbye to inbox overwhelm! MailSense uses AI magic to sort, reply,
           and organize your emails — so you can kick back and let the bots do
           the heavy lifting.
         </p>
